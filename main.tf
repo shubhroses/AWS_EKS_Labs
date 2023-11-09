@@ -9,7 +9,7 @@ module "eks" {
   endpoint_public_access  = true
   endpoint_private_access = false
   public_access_cidrs     = ["0.0.0.0/0"]
-  node_group_name         = "cloudquicklabs"
+  node_group_name         = "shubhroses"
   scaling_desired_size    = 1
   scaling_max_size        = 1
   scaling_min_size        = 1
@@ -19,7 +19,7 @@ module "eks" {
 
 module "vpc" {
   source                  = "./modules/vpc"
-  tags                    = "cloudquicklabs"
+  tags                    = "shubhroses"
   instance_tenancy        = "default"
   vpc_cidr                = "10.0.0.0/16"
   access_ip               = "0.0.0.0/0"
